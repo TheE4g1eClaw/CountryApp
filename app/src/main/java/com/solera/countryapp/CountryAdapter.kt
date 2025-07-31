@@ -1,4 +1,4 @@
-package mx.com.solera.exploradordepaises
+package com.solera.countryapp
 
 class CountryAdapter (private val country: List<Country>):RecyclerView.Adapter<CountryAdapter.ViewHolder> (){
 }
