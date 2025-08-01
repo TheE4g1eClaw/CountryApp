@@ -1,3 +1,6 @@
 <resources>
     <string name="app_name">CountryApp</string>
+    <string name="country">Country</string>
+    <string name="search_btn">Search</string>
+    <string name="country_list_btn">Country List</string>
 </resources>
