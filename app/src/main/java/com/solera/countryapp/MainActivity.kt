@@ -43,6 +43,7 @@ class MainActivity : AppCompatActivity() {
                 val intent = Intent(this@MainActivity, CountryDetailActivity::class.java).apply {
                     putExtra("name", selectedCountry.name)
                     putExtra("region", selectedCountry.subregion)
+                    putExtra("flag",selectedCountry.flags.png)
                 }
                 startActivity(intent)
             } else {

@@ -1,5 +1,6 @@
 package com.solera.countryapp
 
+import com.google.gson.annotations.SerializedName
 
 
 data class CountryResponse(
@@ -10,6 +11,11 @@ data class Country(
     val alpha3code : String,
     val name: String,
     val subregion: String,
-    val image:String
+    val flags:Flag
+)
+
+data class Flag (
+    @SerializedName("png")
+    val png: String
 )
 
