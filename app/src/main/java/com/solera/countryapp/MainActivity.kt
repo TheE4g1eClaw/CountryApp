@@ -25,13 +25,6 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        // GIF
-        val imageView = findViewById<ImageView>(binding.worldImg.id)
-        Glide.with(this)
-            .asGif()
-            .load(R.drawable.planet_gif)
-            .into(imageView)
-
         getCountries()
 
         // Listener del botón buscar
@@ -52,7 +45,7 @@ class MainActivity : AppCompatActivity() {
                 }
                 startActivity(intent)
             } else {
-                Toast.makeText(this, "País no encontrado", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, "Country not found", Toast.LENGTH_SHORT).show()
             }
         }
 
