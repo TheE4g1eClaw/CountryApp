@@ -5,6 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/black"
     tools:context=".MainActivity">
 
     <AutoCompleteTextView
@@ -12,11 +13,17 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
+        android:hint="@string/country"
         android:inputType="text"
-        android:hint="@string/contry"
+        android:minHeight="48dp"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        android:textSize="18sp"
+        android:background="@color/DarkGray"
+        android:padding="10dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.088" />
@@ -25,9 +32,9 @@
         android:id="@+id/search_btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="76dp"
+        android:layout_marginTop="28dp"
         android:layout_marginEnd="60dp"
-        android:text="Button"
+        android:text="@string/search_btn"
         app:layout_constraintEnd_toEndOf="@+id/country_name"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="@+id/country_name"
@@ -38,21 +45,25 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="162dp"
-        android:text="Button"
+        android:text="@string/country_list_btn"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/world_img"
+        app:layout_constraintHorizontal_bias="0.504"
+        app:layout_constraintStart_toStartOf="@+id/world_img"
         app:layout_constraintTop_toBottomOf="@+id/world_img" />
 
     <ImageView
         android:id="@+id/world_img"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="250dp"
+        android:layout_height="235dp"
+        android:layout_marginTop="32dp"
         app:layout_constraintBottom_toTopOf="@+id/country_list_btn"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/search_btn"
+        app:layout_constraintHorizontal_bias="0.493"
+        app:layout_constraintStart_toStartOf="@+id/search_btn"
         app:layout_constraintTop_toBottomOf="@+id/search_btn"
-        tools:srcCompat="@tools:sample/avatars" />
+        app:layout_constraintVertical_bias="0.82"
+        app:srcCompat="@drawable/planet_gif"
+        tools:srcCompat="@drawable/planet_gif" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
