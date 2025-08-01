@@ -3,8 +3,10 @@ package com.solera.countryapp
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.bumptech.glide.Glide
 
 class CountryListAdapter(private val countries: List<Country>) :
     RecyclerView.Adapter<CountryListAdapter.CountryViewHolder>() {
@@ -12,6 +14,7 @@ class CountryListAdapter(private val countries: List<Country>) :
     inner class CountryViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val tvName: TextView = itemView.findViewById(R.id.tv_country_name)
         val tvRegion: TextView = itemView.findViewById(R.id.tv_country_region)
+        val imgAvatar: ImageView = itemView.findViewById(R.id.list_flag) // Assuming you have an ImageView for the avatar
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CountryViewHolder {
@@ -24,6 +27,9 @@ class CountryListAdapter(private val countries: List<Country>) :
         val country = countries[position]
         holder.tvName.text = country.name
         holder.tvRegion.text = country.subregion
+        Glide.with(holder.itemView.context)
+            .load(country.flags.png)
+            .into(holder.imgAvatar)
     }
 
     override fun getItemCount(): Int = countries.size

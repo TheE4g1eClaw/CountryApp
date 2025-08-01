@@ -49,4 +49,6 @@
     </string>
     <string name="title_activity_country_list_activity.kt">CountryListActivity.kt</string>
     <string name="title_activity_country_list_adapter">CountryListAdapter</string>
+    <string name="country_lbl">Country Name</string>
+    <string name="region_lbl">Region</string>
 </resources>
