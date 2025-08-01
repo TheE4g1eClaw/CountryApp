@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="@color/black"
     android:padding="20dp">
 
     <Button
@@ -21,6 +22,9 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="5dp"
         android:gravity="center_horizontal"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        android:background="@color/DarkGray"
         android:text="@string/country_name"
         android:textSize="24sp" />
 
@@ -35,24 +39,60 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
         android:text="@string/region"
         android:layout_marginBottom="5dp"
         android:textSize="24sp" />
 
     <TextView
-        android:id="@+id/textoExtra1"
+        android:id="@+id/textCapital"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
-        android:text="Dato Extra1"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        android:text="Capital: "
         android:layout_marginBottom="5dp"
         android:textSize="24sp" />
     <TextView
-        android:id="@+id/textoExtra2"
+        android:id="@+id/textPopulation"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
-        android:text="Dato Extra2"
+        android:text="Population: "
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        android:layout_marginBottom="5dp"
+        android:textSize="24sp" />
+    <TextView
+        android:id="@+id/textNumericCode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Numeric Code: "
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        android:layout_marginBottom="5dp"
+        android:textSize="24sp" />
+    <TextView
+        android:id="@+id/textLanguages"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        android:layout_marginTop="10dp"
+        android:text="Languages: "
+        android:layout_marginBottom="5dp"
+        android:textSize="24sp" />
+    <TextView
+        android:id="@+id/textIndependent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        android:layout_marginTop="10dp"
+        android:text="Independent: "
         android:layout_marginBottom="5dp"
         android:textSize="24sp" />
 
