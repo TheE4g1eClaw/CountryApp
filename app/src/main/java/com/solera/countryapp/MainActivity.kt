@@ -44,6 +44,11 @@ class MainActivity : AppCompatActivity() {
                     putExtra("name", selectedCountry.name)
                     putExtra("region", selectedCountry.subregion)
                     putExtra("flag",selectedCountry.flags.png)
+                    putExtra("capital",selectedCountry.capital)
+                    putExtra("population",selectedCountry.population)
+                    putExtra("numericCode",selectedCountry.numericCode)
+                    putExtra("independent",selectedCountry.independent)
+                    putExtra("languages", selectedCountry.languages.joinToString(", ") {it.name})
                 }
                 startActivity(intent)
             } else {
