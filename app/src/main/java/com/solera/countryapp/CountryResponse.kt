@@ -3,10 +3,10 @@ package com.solera.countryapp
 
 
 data class CountryResponse(
-    val CountrySearch: List<Countries>
+    val CountrySearch: List<Country>
 )
 
-data class Countries(
+data class Country(
     val alpha3code : String,
     val name: String,
     val subregion: String,

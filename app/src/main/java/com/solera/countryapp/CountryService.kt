@@ -4,6 +4,6 @@ import retrofit2.Call
 import retrofit2.http.GET
 
 interface CountryService {
-    @GET("alpha3Code")
+    @GET("countries")
     fun getCharacters(): Call<CountryResponse>
 }
