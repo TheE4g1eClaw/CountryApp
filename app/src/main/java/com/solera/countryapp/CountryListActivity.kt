@@ -32,7 +32,7 @@ class CountryListActivity : AppCompatActivity() {
     }
 
     private fun getAllCountries() {
-        RetrofitClient.service.getContries().enqueue(object : Callback<List<Country>> {
+        RetrofitClient.service.getCountries().enqueue(object : Callback<List<Country>> {
             override fun onResponse(call: Call<List<Country>>, response: Response<List<Country>>) {
                 if (response.isSuccessful) {
                     val countries = response.body() ?: emptyList()

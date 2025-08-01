@@ -61,7 +61,7 @@ class MainActivity : AppCompatActivity() {
         RetrofitClient.service.getCountries().enqueue(object : Callback<List<Country>> {
             override fun onResponse(call: Call<List<Country>>, response: Response<List<Country>>) {
                 if (response.isSuccessful) {
-                    val countries = response.body() ?: emptyList()
+                    countries = response.body() ?: emptyList()
                     val countryNames = countries.map { it.name }
                     //Log.d("MainActivity", "Countries: $countryNames")
 
