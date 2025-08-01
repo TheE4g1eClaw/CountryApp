@@ -27,9 +27,6 @@ class CountryListAdapter(private val countries: List<Country>) :
         val country = countries[position]
         holder.tvName.text = country.name
         holder.tvRegion.text = country.subregion
-        Glide.with(holder.itemView.context)
-            .load(country.flags.png)
-            .into(holder.imgAvatar)
     }
 
     override fun getItemCount(): Int = countries.size
