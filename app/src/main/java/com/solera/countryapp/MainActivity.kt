@@ -30,15 +30,15 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun getCountries(){
-        RetrofitClient.service.getCharacters().enqueue(object : Callback<CountryResponse> {
+        RetrofitClient.service.getCharacters().enqueue(object : Callback<List<Country>> {
             override fun onResponse(
-                call: Call<CountryResponse>,
-                response: Response<CountryResponse>
+                call: Call<List<Country>>,
+                response: Response<List<Country>>
             ) {
                 if (response.isSuccessful) {
-                    val countries = response.body()?.CountrySearch ?: emptyList()
+                    val countries = response.body() ?: emptyList()
                     val countryNames = countries.map { it.name }
-                    Log.d("MainActivity", "Countries: $countryNames")
+                    //Log.d("MainActivity", "Countries: $countryNames")
 
                     val adapter = ArrayAdapter(
                         this@MainActivity,
@@ -49,7 +49,7 @@ class MainActivity : AppCompatActivity() {
                 }
             }
 
-            override fun onFailure(call: Call<CountryResponse>, t: Throwable) {
+            override fun onFailure(call: Call<List<Country>>, t: Throwable) {
                 Toast.makeText(this@MainActivity,  "Error al conectar", Toast.LENGTH_LONG).show()
             }
         })
